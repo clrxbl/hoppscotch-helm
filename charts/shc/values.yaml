@@ -109,15 +109,6 @@ community:
       tos: "https://docs.example.com/terms"
       privacyPolicy: "https://docs.example.com/privacy"
 
-# ServiceAccount configuration
-serviceAccount:
-  # Name of the ServiceAccount; if not set, defaults to "{{ .Release.Name }}-sa"
-  name: ""
-  # Annotations for the ServiceAccount (e.g., for AWS IRSA)
-  annotations: {}
-  # Example for AWS IRSA:
-  # eks.amazonaws.com/role-arn: "arn:aws:iam::${aws_account_id}:role/devops-${stage}-hoppscotch"
-
 # Service configuration
 service:
   apiVersion: v1
