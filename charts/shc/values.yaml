@@ -17,7 +17,6 @@ community:
       cpu: 250m
       memory: 256Mi
   migration:
-    upgradeEnabled: false # If true, the migration job will run on every helm upgrade
     env: {}
 
   deployment:
