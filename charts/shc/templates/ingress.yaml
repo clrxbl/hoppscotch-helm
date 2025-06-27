@@ -4,7 +4,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ .Values.service.name }}
-  namespace: {{ .Values.global.namespace | default .Release.Namespace }}
+  namespace: {{ .Release.Namespace }}
   annotations:
     {{- range $key, $value := .Values.service.ingress.annotations}}
     {{ $key }}: {{ $value | quote }}

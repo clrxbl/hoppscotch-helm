@@ -1,7 +1,6 @@
 # Global settings for the application
 global:
   externalIP: "0.0.0.0" # Example: "192.168.1.1"
-  namespace: "default" # Example: "hoppscotch"
 
 # Community-specific settings
 community:
