@@ -20,6 +20,9 @@ community:
     upgradeEnabled: false # If true, the migration job will run on every helm upgrade
     env: {}
 
+  deployment:
+    env: {}
+
   secret:
     enabled: true
     name: "" # Name of already existing secret
