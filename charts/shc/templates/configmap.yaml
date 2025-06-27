@@ -46,3 +46,7 @@ data:
   # Links
   VITE_APP_TOS_LINK: {{ .Values.community.config.links.tos | quote }}
   VITE_APP_PRIVACY_POLICY_LINK: {{ .Values.community.config.links.privacyPolicy | quote }}
+
+  # Google Auth (non-sensitive)
+  GOOGLE_CALLBACK_URL: {{ .Values.community.config.auth.google.callbackUrl | quote }}
+  GOOGLE_SCOPE: {{ .Values.community.config.auth.google.scope | quote }}
