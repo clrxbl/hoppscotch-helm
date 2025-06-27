@@ -41,9 +41,6 @@ spec:
             echo "Running database migrations..."
             pnpx prisma migrate deploy
         env:
-          - name: DATABASE_URL
-            {{- if .Values.community.config.database.external }}
-            value: {{ .Values.community.config.database.url | quote }}
-            {{- else }}
-            value: "postgresql://{{ .Values.community.config.postgresql.username }}:{{ .Values.community.config.postgresql.password }}@{{ .Release.Name }}-postgresql:5432/{{ .Values.community.config.postgresql.database }}?schema=public"
-            {{- end }}
+          {{- with .Values.community.migration.env }}
+          {{- toYaml . | nindent 10 }}
+          {{- end }}

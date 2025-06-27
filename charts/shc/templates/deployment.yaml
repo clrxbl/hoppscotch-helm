@@ -73,7 +73,7 @@ spec:
             - configMapRef:
                 name: {{ .Release.Name }}-community-config
             - secretRef:
-                name: {{ .Release.Name }}-community-secrets
+                name: {{ .Values.community.secret.name | default (printf "%s-community-secrets" .Release.Name) }}
           resources:
             {{- toYaml .Values.community.resources | nindent 12 }}
       {{- if .Values.community.config.affinityEnabled }}

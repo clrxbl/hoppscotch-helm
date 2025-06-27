@@ -18,6 +18,11 @@ community:
       memory: 256Mi
   migration:
     upgradeEnabled: false # If true, the migration job will run on every helm upgrade
+    env: {}
+
+  secret:
+    enabled: true
+    name: "" # Name of already existing secret
 
   config:
     database:
